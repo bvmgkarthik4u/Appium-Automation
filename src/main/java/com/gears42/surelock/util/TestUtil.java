@@ -6,9 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Reporter;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class TestUtil {
@@ -25,8 +23,8 @@ public class TestUtil {
         Reporter.log("adb devices", true);
     }
 
-    public void sleepThread(int a) throws InterruptedException{
-        a=a*1000;
+    public void sleepThread(int a) throws InterruptedException {
+        a = a * 1000;
         Thread.sleep(a);
     }
 }

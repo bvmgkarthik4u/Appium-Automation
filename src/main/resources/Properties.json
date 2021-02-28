@@ -1,6 +1,5 @@
 {
-  "DriverInitialisation":
-  {
+  "DriverInitialisation": {
     "adbPath": "D:\\AndroidSDK\\platform-tools\\",
     "SLAPKPath": "D:\\surelock.apk",
     "appPackage": "com.gears42.surelock",
@@ -8,13 +7,12 @@
     "deviceName": "5df9bf9",
     "serverPath": "http://127.0.0.1:4723/wd/hub",
     "noReset": true,
-    "adbExecTimeout" : 90000,
-    "newCommandTimeout" : 2400
+    "adbExecTimeout": 90000,
+    "newCommandTimeout": 2400
   },
-  "TestConfiguration":
-  {
+  "TestConfiguration": {
     "testType": "",
     "testSuite": "",
-    "testClass" : ""
+    "testClass": ""
   }
 }

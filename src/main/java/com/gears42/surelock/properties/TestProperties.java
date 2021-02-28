@@ -12,9 +12,9 @@ import java.io.IOException;
 public enum TestProperties {
     INSTANCE;
     public Properties mProperties;
-    public final String PACKAGEID="com.gears42.surelock";
+    public static final String PACKAGEID="com.gears42.surelock";
     public static final int IMPWAIT=30;
-
+    public static final String ASTROFARMCOMM="";
     TestProperties(){
         try {
             mProperties =  new Gson().fromJson(readSettingsFile(), Properties.class);

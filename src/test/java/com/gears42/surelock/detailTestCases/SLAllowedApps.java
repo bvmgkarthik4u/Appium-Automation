@@ -16,11 +16,16 @@ import static java.lang.Thread.sleep;
 public class SLAllowedApps extends BaseTestInitialization
 {
 	@Test(priority=1, description="Accept EULA")
-	public void acceptEULA() throws InterruptedException, IOException {
+	public void acceptEULA() throws InterruptedException {
 		EulaPage lEulaPage = new EulaPage(mAppiumDriver);
 		lEulaPage.tapOnAcceptEula();
-		Reporter.log("SL Home screen displayed", true);
 		Assert.assertTrue(true, "EULA accepted Successfully");
-	} 
+	}
+	@Test(priority=2, description="Config Runtime Permissions")
+	public void configRuntimePermissions() throws InterruptedException {
+		EulaPage lEulaPage = new EulaPage(mAppiumDriver);
+		lEulaPage.configRuntimePermissions();
+		Assert.assertTrue(true, "Enabled all Runtime Permissions Successfully");
+	}
 
 }

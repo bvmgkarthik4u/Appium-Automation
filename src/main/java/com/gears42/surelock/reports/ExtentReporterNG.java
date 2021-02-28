@@ -1,7 +1,3 @@
-/*
- * @autor : Naveen Khunteta
- * 
- */
 package com.gears42.surelock.reports;
 
 import com.relevantcodes.extentreports.ExtentReports;

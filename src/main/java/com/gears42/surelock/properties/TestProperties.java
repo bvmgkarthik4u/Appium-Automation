@@ -16,22 +16,22 @@ public enum TestProperties {
 
     TestProperties() {
         try {
-            mProperties = new Gson().fromJson(readSettingsFile(), Properties.class);
+            mProperties = new Gson().fromJson(readPropertyFile(), Properties.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public String readSettingsFile() {
-        System.out.println("readSettingsFile");
+    public String readPropertyFile() {
+        System.out.println("readPropertyFile");
         StringBuilder lStrSettings = new StringBuilder();
 
-        File lSettingsFile = new File(".\\Properties.json");
+        File lSettingsFile = new File(".\\resources\\Properties.json");
         if (!lSettingsFile.exists()) {
             ClassLoader classLoader = getClass().getClassLoader();
             lSettingsFile = new File(classLoader.getResource("Properties.json").getFile());
         }
-        System.out.println("readSettingsFile Exist :: " + lSettingsFile.exists());
+        System.out.println("readPropertyFile Exist :: " + lSettingsFile.exists());
         //Read text from file
         try {
             BufferedReader br = new BufferedReader(new FileReader(lSettingsFile));
@@ -44,7 +44,7 @@ public enum TestProperties {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Settings :: " + lStrSettings.toString());
+        System.out.println("Properties :: " + lStrSettings.toString());
         return lStrSettings.toString();
     }
 

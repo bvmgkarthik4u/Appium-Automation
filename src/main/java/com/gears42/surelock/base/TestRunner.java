@@ -21,7 +21,7 @@ public class TestRunner extends BaseTestInitialization {
             }
         } else if (lTestConfiguration.getTestType().equalsIgnoreCase("suite")) {
             List<String> suites = new ArrayList<String>();
-            suites.add(".\\testng.xml");
+            suites.add(".\\resources\\"+lTestConfiguration.getTestSuite());
             testng.setTestSuites(suites);
             testng.run();
         }
